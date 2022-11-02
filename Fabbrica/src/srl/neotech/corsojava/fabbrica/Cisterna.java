@@ -9,7 +9,7 @@ public class Cisterna {
 	private Integer livelloGas;
 	private String materialeCisterna;
 	
-	static final int THRESHOLD=30;
+	
 	
 	Random r = new Random();
 	

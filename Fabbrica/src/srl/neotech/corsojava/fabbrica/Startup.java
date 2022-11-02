@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Startup {
 	
 	static ArrayList<Cisterna> cisterne = new ArrayList<Cisterna>();
+	static final int THRESHOLD=30;
 
 	public static void main(String[] args) {
 		
@@ -21,7 +22,7 @@ public class Startup {
 		int sum=0;
 		for(Cisterna c : cisterne) {
 			
-			if(c.getLivelloGas()>=c.THRESHOLD) {
+			if(c.getLivelloGas()>=THRESHOLD) {
 				
 				sum +=c.getQuantita();
 				System.out.println("Quantita: "+c.getQuantita()+" EvapPerDay: "+c.getEvapPerDay()+" LivelloGas: "+c.getLivelloGas()+" MaterialeCisterna: "
@@ -40,7 +41,7 @@ public class Startup {
 				Integer evap=c.getEvapPerDay();
 				int risultato=livello-(evap*7);
 				
-				if(risultato<c.THRESHOLD) {
+				if(risultato<THRESHOLD) {
 					sum2+=c.getQuantita();	
 			}
 		}
@@ -54,7 +55,7 @@ public class Startup {
 				Integer evap=c.getEvapPerDay();
 				//risultato=livello-(evap*7)
 				
-				while((livello-(evap*i))>c.THRESHOLD){
+				while((livello-(evap*i))>THRESHOLD){
 					i++;
 					giorni+=1;
 					//System.out.println(giorni);
