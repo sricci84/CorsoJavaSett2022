@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Startup {
 	
 	static ArrayList<Cisterna> cisterne = new ArrayList<Cisterna>();
-	static final int THRESHOLD=30;
+	static final int THRESHOLD=50;
 
 	public static void main(String[] args) {
 		
-		for(int i =0;i<100;i++) {
+		for(int i =0;i<3;i++) {
 		
 			Cisterna cisterna = new Cisterna();
 			cisterna.setQuantita();
@@ -48,18 +48,20 @@ public class Startup {
 			System.out.println("Dopo 7 giorni "+ sum2 +" litri non sono  piu vendibile");
 			
 			
-			int giorni=1;
+			int giorni=0;
 			int i =1;
+			 
 			for(Cisterna c : cisterne) {
 				Integer livello=c.getLivelloGas();
 				Integer evap=c.getEvapPerDay();
-				//risultato=livello-(evap*7)
 				
-				while((livello-(evap*i))>THRESHOLD){
+				
+				while((livello-(evap*i))>=THRESHOLD){
 					i++;
-					giorni+=1;
-					//System.out.println(giorni);
-				}}
+					giorni+=1;	
+				}
+			}
+			
 			System.out.println("Al giorno numero: "+giorni+" non ci sarà neanche una bibita vendibile");
 				
 			}
