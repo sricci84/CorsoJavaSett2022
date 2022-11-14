@@ -15,7 +15,7 @@ public class Associato {
 	
 	private Integer idAssociato;
 	private String nominativo;
-	static ArrayList<Integer>listaIdLibriPresi = new ArrayList<Integer>();
+	private ArrayList<Integer>listaIdLibriPresi = new ArrayList<Integer>();
 	
 	public enum Stato{ Attivo, Disattivo};
 	public Stato getStato() {
@@ -33,6 +33,14 @@ public class Associato {
 	}
 	public void setNominativo() {
 		this.nominativo = f.name().fullName();
+	}
+
+	public ArrayList<Integer> getListaIdLibriPresi() {
+		return listaIdLibriPresi;
+	}
+
+	public void setListaIdLibriPresi(ArrayList<Integer> listaIdLibriPresi) {
+		this.listaIdLibriPresi = listaIdLibriPresi;
 	}
 
 	@Override

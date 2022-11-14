@@ -7,10 +7,11 @@ import java.util.Random;
 
 public class Startup {
 	
-	static Random r = new Random();
 
 	public static void main(String[] args) {
 		
+				Random r = new Random();
+				
 				//creazione 100 libri
 				for(int i=0;i<100;i++) {
 					Libro libro = new Libro();
@@ -19,20 +20,20 @@ public class Startup {
 					libro.setScaffale(r.nextInt(1, 4));
 					libro.setAutore();
 					libro.setTitolo();
-					Biblioteca.libri.add(libro);
-					
-				}
-				
-				for(int i=0;i<(r.nextInt(1, 5));i++) {
-					Associato.listaIdLibriPresi.add(r.nextInt(1,Biblioteca.libri.size()));	
+					Biblioteca.libri.add(libro);					
 				}
 				
 				//creazione 100 associati
 				for(int j=0;j<100;j++) {
+					
 					Associato associato =new Associato();
 					associato.getStato();
 					associato.setNominativo();
 					associato.setIdAssociato(j+1);
+					//listaidPresi
+					for(int i=1;i<=(r.nextInt(1, 5));i++) {
+						associato.getListaIdLibriPresi().add(r.nextInt(1,Biblioteca.libri.size()));	
+					}
 					
 					Biblioteca.associati.add(associato);
 					
@@ -59,6 +60,8 @@ public class Startup {
 				associatoNuovo.getStato();
 				associatoNuovo.setNominativo();
 				associatoNuovo.setIdAssociato(101);
+				for(int i=1;i<=(r.nextInt(1, 5));i++) {
+					associatoNuovo.getListaIdLibriPresi().add(r.nextInt(1,Biblioteca.libri.size()));	}
 				Biblioteca.associati.add(associatoNuovo);
 				
 				//rimuovere associato dalla lista associati

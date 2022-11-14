@@ -14,10 +14,8 @@ public class Libro {
 	private String autore;
 	private Integer scaffale;
 	
-	public enum Sezione{Fantasy, Horror, Scientifico, Romanzo, Giallo};
 	public Sezione getSezione() {
-		return Sezione.values()[r.nextInt(Sezione.values().length)];
-		
+		return Sezione.values()[r.nextInt(Sezione.values().length)];	
 	}
 	
 	public Integer getIdLibro() {
@@ -50,6 +48,8 @@ public class Libro {
 	public void setScaffale(Integer scaffale) {
 		this.scaffale = scaffale;
 	}
+	
+	
 
 	@Override
 	public String toString() {
