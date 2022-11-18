@@ -18,6 +18,7 @@ public class Associato {
 	private ArrayList<Integer>listaIdLibriPresi = new ArrayList<Integer>();
 	
 	public enum Stato{ Attivo, Disattivo};
+	
 	public Stato getStato() {
 		return Stato.values()[r.nextInt(Stato.values().length)];
 	}

@@ -1,9 +1,6 @@
 package srl.neotech.corsojava.biblioteca;
 
-
 import java.util.Random;
-
-
 
 public class Startup {
 	
@@ -20,7 +17,8 @@ public class Startup {
 					libro.setScaffale(r.nextInt(1, 4));
 					libro.setAutore();
 					libro.setTitolo();
-					Biblioteca.libri.add(libro);					
+					Biblioteca.libri.add(libro);
+		
 				}
 				
 				//creazione 100 associati
@@ -31,7 +29,7 @@ public class Startup {
 					associato.setNominativo();
 					associato.setIdAssociato(j+1);
 					//listaidPresi
-					for(int i=1;i<=(r.nextInt(1, 5));i++) {
+					for(int i=0;i<(r.nextInt(1, 6));i++) {
 						associato.getListaIdLibriPresi().add(r.nextInt(1,Biblioteca.libri.size()));	
 					}
 					
@@ -69,7 +67,7 @@ public class Startup {
 				System.out.println(Biblioteca.associati.toString());
 				System.out.println(Biblioteca.associati.size());
 				
-				
+								
 	}
 	
 	}
