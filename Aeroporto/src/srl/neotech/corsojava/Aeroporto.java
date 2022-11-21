@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Aeroporto {
 	
-	private ArrayList<Aereo>listaAerei=new ArrayList<Aereo>();
-	private ArrayList<Passeggero>listaPasseggeri=new ArrayList<Passeggero>();
 	
+	private ArrayList<Passeggero>listaPasseggeri=new ArrayList<Passeggero>();
+	private ArrayList<Passeggero>listaPasseggeriInArrivo=new ArrayList<Passeggero>();
 	private ArrayList<Aereo>listaAereiInPartenza=new ArrayList<Aereo>();
 	private ArrayList<Aereo>listaAereiInAvvicinamento=new ArrayList<Aereo>();
 	
@@ -27,14 +27,7 @@ public class Aeroporto {
 		this.listaAereiInAvvicinamento = listaAereiInAvvicinamento;
 	}
 	
-	
-	
-	public ArrayList<Aereo> getListaAerei() {
-		return listaAerei;
-	}
-	public void setListaAerei(ArrayList<Aereo> listaAerei) {
-		this.listaAerei = listaAerei;
-	}
+
 	public ArrayList<Passeggero> getListaPasseggeri() {
 		return listaPasseggeri;
 	}
@@ -44,17 +37,26 @@ public class Aeroporto {
 
 	//atterraggio
 	public Aereo atterraggio(Aereo a) {
-		if(a.getStatoAereo().equals(StatoAereo.IN_AVVICINAMENTO)) {
-			a.setStatoAereo(StatoAereo.ATTERRATO);
-			System.out.println("aereo: "+a.getIdUnivoco()+ " atterrato");
-		}
+
+			if(a.getDistanzaDallAeroporto()<=100) {
+				a.setStatoAereo(StatoAereo.IN_AVVICINAMENTO);
+			}
+			if(a.getDistanzaDallAeroporto()<=0) {
+				a.setStatoAereo(StatoAereo.ATTERRATO);				
+			}				
 		return a;
 	}
 	//decollo
 	public Aereo decollo(Aereo a) {
-		if(a.getStatoAereo().equals(StatoAereo.IN_PARTENZA)) {
-			a.setStatoAereo(StatoAereo.DECOLLATO);
-			System.out.println("aereo: "+a.getIdUnivoco()+ " in decollo");
+		while(a.getDistanzaDallAeroporto()<RAGGIODIAZIONE) {
+			a.setDistanzaDallAeroporto(a.getDistanzaDallAeroporto()+a.getVelocita());
+			if(a.getDistanzaDallAeroporto()>=1) {
+				a.setStatoAereo(StatoAereo.DECOLLATO);
+			}
+			if(a.getDistanzaDallAeroporto()>=100) {
+				a.setStatoAereo(StatoAereo.FUORI_SPAZIO_AEREO);
+			}
+				System.out.println(a);
 		}
 		return a;
 	}
@@ -65,8 +67,15 @@ public class Aeroporto {
 	}
 	//checkout
 	public Passeggero checkout(Passeggero p) {
-		System.out.println("in checkout: "+p);
+		System.out.println("in checkout: ");
 		return p;
+	}
+	
+	public ArrayList<Passeggero> getListaPasseggeriInArrivo() {
+		return listaPasseggeriInArrivo;
+	}
+	public void setListaPasseggeriInArrivo(ArrayList<Passeggero> listaPasseggeriInArrivo) {
+		this.listaPasseggeriInArrivo = listaPasseggeriInArrivo;
 	}
 }
 	

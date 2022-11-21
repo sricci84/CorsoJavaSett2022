@@ -3,6 +3,14 @@
   <groupId>Aeroporto</groupId>
   <artifactId>Aeroporto</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  	<groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
+  	
+  	</dependency>
+  </dependencies>  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>

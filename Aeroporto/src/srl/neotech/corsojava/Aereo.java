@@ -63,7 +63,7 @@ public class Aereo {
 	public String toString() {
 		return "Aereo [idUnivoco=" + idUnivoco + ", orario=" + orario + ", compagniaAerea=" + compagniaAerea
 				+ ", velocita=" + velocita + ", distanzaDallAeroporto=" + distanzaDallAeroporto
-				+ ", statoAereo=" + statoAereo +"]";
+				+ ", statoAereo=" + statoAereo +", modello=" + modello +"]";
 	}
 	
 	

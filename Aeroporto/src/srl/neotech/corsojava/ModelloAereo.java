@@ -1,6 +1,10 @@
 package srl.neotech.corsojava;
 
-public class ModelloAereo extends Aereo{
+import java.util.Random;
+
+public class ModelloAereo {
+	
+	Random r=new Random();
 	
 	private String costruttore;
 	private String codiceModello;
@@ -9,8 +13,9 @@ public class ModelloAereo extends Aereo{
 	public String getCostruttore() {
 		return costruttore;
 	}
-	public void setCostruttore(String costruttore) {
-		this.costruttore = costruttore;
+	public void setCostruttore() {
+		String []costruttore = {"Boeing","Airbus"};
+		this.costruttore = costruttore[r.nextInt(2)];
 	}
 	public String getCodiceModello() {
 		return codiceModello;
@@ -26,16 +31,10 @@ public class ModelloAereo extends Aereo{
 	}
 	
 	
-	public ModelloAereo(String costruttore, String codiceModello, Integer capienzaNumPasseggeri) {
-		super();
-		this.costruttore = costruttore;
-		this.codiceModello = codiceModello;
-		this.capienzaNumPasseggeri = capienzaNumPasseggeri;
-		this.setModello(this);
-	}
+
 	@Override
 	public String toString() {
-		return super.toString()+"ModelloAereo [costruttore=" + costruttore + ", codiceModello=" + codiceModello
+		return "[costruttore=" + costruttore + ", codiceModello=" + codiceModello
 				+ ", capienzaNumPasseggeri=" + capienzaNumPasseggeri + "]";
 	}
 	
