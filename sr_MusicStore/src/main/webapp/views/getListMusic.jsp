@@ -25,21 +25,21 @@ table, th, td {
     <td bgcolor="#ECFFDC">The Weekend</td>
     <td bgcolor="#ECFFDC">Blinding lights</td>
     <td bgcolor="#ECFFDC">1.00 €</td>
-    <td bgcolor="#ECFFDC"><a href="musicdetail"><img src=”https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png”/></a><img src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg" width="50"/></td>
+    <td bgcolor="#ECFFDC"><a href="musicdetail"><img src="https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png" width="50"/></a><img src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg" width="50"/></td>
   </tr>
   <tr>
     <td style="display:none">2</td>
     <td bgcolor="#98FB98">Black Eyes Peas</td>
     <td bgcolor="#98FB98">Don't you worry</td>
     <td bgcolor="#98FB98">1.00 €</td>
-    <td bgcolor="#98FB98"><a href="musicdetail"><img src=”https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png”/></a><img src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg" width="50"/></td>
+    <td bgcolor="#98FB98"><a href="musicdetail"><img src="https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png" width="50"/></a><img src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg" width="50"/></td>
   </tr>
     <tr>
     <td style="display:none">3</td>
     <td bgcolor="#ECFFDC">Of Monster and Man</td>
     <td bgcolor="#ECFFDC">Litte</td>
     <td bgcolor="#ECFFDC">1.00 €</td>
-    <td bgcolor="#ECFFDC"><a href="musicdetail"><img src=”https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png”/></a><img src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg" width="50"/></td>
+    <td bgcolor="#ECFFDC"><a href="musicdetail"><img src="https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png" width="50"></img></a><img src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg" width="50"/></td>
   </tr>
 </table>
 
